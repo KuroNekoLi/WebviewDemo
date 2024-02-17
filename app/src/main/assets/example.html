@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebView Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #content {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+    </style>
+    <script type="text/javascript">
+        function showAndroidToast(message) {
+            Android.showToast(message);
+        }
+        function changeContent(newContent) {
+            document.getElementById('content').innerText = newContent;
+        }
+    </script>
+</head>
+<body>
+<h1>WebView 與 Android 互動示例</h1>
+<p>點擊按鈕調用 Android 的 showToast 方法。</p>
+<button onclick="showAndroidToast('這是從 WebView 通過 JavaScript 調用的 Android Toast!')">顯示 Toast</button>
+<div id="content">這裡會顯示內容</div>
+<button onclick="changeContent('這是由 JavaScript 函數直接更改的內容')">改變內容</button>
+</body>
+</html>
